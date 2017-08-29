@@ -25,7 +25,7 @@ namespace SdlDB.Entity
         private decimal gross;  //毛重
         private decimal net;    //净重
         private string exitFlag;//空车出场标识
-        private decimal deuctNum;   //扣杂
+        private decimal deuctNum;   //差异
         private decimal trayWeight;
         private decimal trayQuantity;
         private string hs_flag;

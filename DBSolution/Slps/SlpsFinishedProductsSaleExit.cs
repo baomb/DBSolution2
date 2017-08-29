@@ -298,9 +298,10 @@ namespace DBSolution
                     Slps_FinishedProductsSaleAdapter.UpdateSlps_FinishedProductsSale(finishedHead);
                     
                     //行项目操作
-                    Slps_FinishedProductsSaleDetail finishedDetail = new Slps_FinishedProductsSaleDetail();
+                    Slps_FinishedProductsSaleDetail finishedDetail;
                     for (int i = 0; i < dtGv.Rows.Count; i++)
                     {
+                        finishedDetail = new Slps_FinishedProductsSaleDetail();
                         finishedDetail.QrcodeScanResult = dtGv.Rows[i]["qrcodeScanResult"].ToString();
                         finishedDetail.SapOrderNo = dtGv.Rows[i]["sapOrderNo"].ToString();
                         finishedDetail.LineItemNo = dtGv.Rows[i]["lineItemNo"].ToString();

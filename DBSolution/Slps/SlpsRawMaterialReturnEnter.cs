@@ -11,8 +11,6 @@ namespace DBSolution
     public partial class SlpsRawMaterialReturnEnter : Form
     {
         private DataSet dsSAP = new DataSet();
-        private string[] father = new string[] { "", "", "" };
-        private string selEbeln = "";
         SerialPortHelper s = null;
         private bool readPort = true;
         private string formTittle = "原材料退货入厂";
@@ -71,11 +69,6 @@ namespace DBSolution
                 if (!ValidateHelper.IsVehiclenumber(textBoxCar.Text))
                 {
                     MessageBox.Show(this, "输入的车牌号格式不对", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-                if (father[0].ToString() != "")
-                {
-                    MessageBox.Show(this, "编辑状态不能入厂操作，请重新进入该界面！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 if (textBoxCar.Text.Trim() == "")
@@ -182,11 +175,6 @@ namespace DBSolution
                     MessageBox.Show(this, "输入的车牌号不能为空", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                if (father[0].ToString() == "")
-                {
-                    MessageBox.Show(this, "请选择要编辑的退货入厂信息", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
                 if (textBoxCar.Text.Trim() == "")
                 {
                     MessageBox.Show(this, "请输入车牌号！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -196,16 +184,6 @@ namespace DBSolution
                 {
                     MessageBox.Show(this, "没有退货单信息！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
-                }
-
-                if (father[0].ToString() != textBoxCar.Text)
-                {
-                    DataTable dtenter = Sdl_RawMaterialReturnTitleAdapter.GetSdl_RawMaterialReturnTitleSetByFeild(new string[] { "ENTERTIME" }, " where trucknum='" + textBoxCar.Text + "' and HSFLAG = 'H' ").Tables[0];
-                    if (dtenter.Rows.Count > 0)
-                    {
-                        MessageBox.Show(this, "该车已经与" + DateTime.Parse(dtenter.Rows[0]["ENTERTIME"].ToString()).ToString("yyyy-MM-dd hh:mm") + "进厂,还未出厂！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        return;
-                    }
                 }
 
                 try

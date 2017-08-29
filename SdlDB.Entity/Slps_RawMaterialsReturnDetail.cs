@@ -20,7 +20,7 @@ namespace SdlDB.Entity
         private decimal menge;  //可退货数量
         private decimal senge;  //实退数量
         private string lgort;   //仓库
-        private string bktxt;
+        private string bktxt;   //产地品牌
 
         public string QrcodeScanResult
         {
