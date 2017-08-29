@@ -1,15 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using SdlDB.Data;
 using SdlDB.Entity;
 using System.Threading;
-using System.Collections.Specialized;
 using SdlDB.Utility;
 
 namespace DBSolution
@@ -105,7 +99,7 @@ namespace DBSolution
                     MessageBox.Show(this, "该车已经与" + DateTime.Parse(dtenter.Rows[0]["ENTERTIME"].ToString()).ToString("yyyy-MM-dd hh:mm") + "进厂,还未出厂！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
-                DataTable dtGv = (DataTable)dataGridViewDetails.DataSource;
+                
                 try
                 {
                     //头信息完善
@@ -113,33 +107,63 @@ namespace DBSolution
                     returnHead.TimeFlag = Common.GetServerDate();
                     returnHead.CarNo = textBoxCar.Text.ToString().Trim();
                     returnHead.Factory = textBoxFactory.Text.ToString();
-
-
-
-                    for (int i = 0; i < dataGridViewDetails.Rows.Count; i++)
+                    returnHead.DbNum = textBoxDbnum.Text.ToString();
+                    returnHead.EnterWeightMan = textBoxWeighMan.Text.ToString();
+                    returnHead.Tare = Convert.ToDecimal(textBoxTare.Text.ToString().Trim());
+                    returnHead.Hs_flag = "H";
+                    int addFlag = Slps_RawMaterialsReturnAdapter.AddSlps_RawMaterialsReturn(returnHead);
+                    if (addFlag > 1)
                     {
-                        Sdl_RawMaterialReturnTitle model = new Sdl_RawMaterialReturnTitle();
-                        model.TRUCKNUM = textBoxCar.Text;
-                        model.EBELN = dtGv.Rows[i]["EBELN"].ToString();
-                        model.TIMEFLAG = Common.GetServerDate();
-                        model.LIFNR = dtGv.Rows[i]["LIFNR"].ToString();
-                        model.NAME1 = dtGv.Rows[i]["NAME1"].ToString();
-                        model.HSFLAG = "H";
-                        model.TARE = Double.Parse(textBoxTare.Text.Trim());
-                        model.WEIGHMAN = textBoxWeighMan.Text;
-                        model.WERKS = textBoxFactory.Text;
-                        model.DBNUM = Sdl_SysSettingAdapter.LoadSdl_SysSetting().ID;
-                        Sdl_RawMaterialReturnTitleAdapter.AddSdl_RawMaterialReturnTitle(model);
+                        DataTable dtGv = (DataTable)dataGridViewDetails.DataSource;
+                        Slps_RawMaterialsReturnDetail returnDetail;
+                        for (int i = 0; i < dtGv.Rows.Count; i++)
+                        {
+                            returnDetail = new Slps_RawMaterialsReturnDetail();
+                            returnDetail.QrcodeScanResult = dtGv.Rows[i]["qrcodeScanResult"].ToString();
+                            returnDetail.SapOrderNo = dtGv.Rows[i]["sapOrderNo"].ToString();
+                            returnDetail.LineItemNo = dtGv.Rows[i]["lineItemNo"].ToString();
+                            returnDetail.Matnr = dtGv.Rows[i]["skuCode"].ToString();
+                            returnDetail.Maktx = dtGv.Rows[i]["skuName"].ToString();
+                            returnDetail.Menge = Convert.ToDecimal(dtGv.Rows[i]["beforeSendTonQuantity"].ToString());
+                            addFlag = Slps_RawMaterialsReturnDetailAdapter.AddSlps_RawMaterialsReturnDetail(returnDetail);
+                            if (addFlag <= 1)
+                            {
+                                Slps_RawMaterialsReturnDetailAdapter.DeleteSlps_RawMaterialsReturnDetail(returnHead.TimeFlag);
+                                Slps_RawMaterialsReturnAdapter.DeleteSlps_RawMaterialsReturn(returnHead.TimeFlag, returnHead.CarNo);
+                                break;
+                            }
+                        }
+
                     }
-                    Sdl_TruckWeight tw = new Sdl_TruckWeight();
-                    tw.ENTERTIME = DateTime.Parse(textBoxEnterTime.Text);
-                    tw.TARE = float.Parse(textBoxTare.Text);
-                    tw.TIMEFLAG = textBoxEnterTime.Text;
-                    tw.TRUCKNUM = textBoxCar.Text;
-                    tw.WERKS = textBoxFactory.Text;
-                    Sdl_TruckWeightAdapter.AddSdl_TruckWeight(tw);
-                    MessageBox.Show(this, "保存成功", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
+                    else
+                    {
+                        MessageBox.Show(this, "车辆入场信息保存失败，数据已重置，请重新过磅。", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    if (addFlag <= 1)
+                    {
+                        //保存成功将订单状态设置为已入场
+                        Sdl_SlpsEnter slpsEnter = new Sdl_SlpsEnter();
+                        for (int i = 0; i < qrCodeArray.Length; i++)
+                        {
+                            slpsEnter = Sdl_SlpsEnterAdapter.GetSdl_SlpsEnter(qrCodeArray[i]);
+                            slpsEnter.TimeFlag = returnHead.TimeFlag;
+                            slpsEnter.OrderStatus = "0";
+                            Sdl_SlpsEnterAdapter.UpdateSdl_SlpsEnter(slpsEnter);
+                        }
+
+                        //保存车辆皮重信息
+                        Sdl_TruckWeight tw = new Sdl_TruckWeight();
+                        tw.ENTERTIME = DateTime.Parse(Common.GetServerDate());
+                        tw.TARE = float.Parse(textBoxTare.Text);
+                        tw.TIMEFLAG = returnHead.TimeFlag;
+                        tw.TRUCKNUM = textBoxCar.Text;
+                        tw.WERKS = textBoxFactory.Text;
+                        Sdl_TruckWeightAdapter.AddSdl_TruckWeight(tw);
+                        MessageBox.Show(this, "保存成功", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    
+                    
                 }
                 catch
                 {
