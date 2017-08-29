@@ -1,0 +1,1966 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DF364684-AE48-4E17-A268-D32FEF0C2382}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DBSolution2</RootNamespace>
+    <AssemblyName>DBSolution2</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <PublishUrl>\\192.168.9.22\sdldb_2\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>true</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <UpdateUrl>http://192.168.9.22:88/</UpdateUrl>
+    <TargetCulture>zh-CN</TargetCulture>
+    <ProductName>史丹利电子衡系统</ProductName>
+    <PublisherName>史丹利农业集团股份有限公司</PublisherName>
+    <MinimumRequiredVersion>1.0.0.121</MinimumRequiredVersion>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>index.htm</WebPage>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>2.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsUrl>I:\Teng\sdldbxt</BootstrapperComponentsUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>4D0ECEFF7A14B2873D38DBDFC2D8C64270CB67CF</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>DBSolution_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>DBSolution.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\Sdlnewicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>DLL\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>DLL\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>DLL\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="office, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>DLL\office.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccessoryAllotEnterTransferIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccessoryAllotEnterTransferIn.Designer.cs">
+      <DependentUpon>AccessoryAllotEnterTransferIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccessoryAllotEnterTransferOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccessoryAllotEnterTransferOut.Designer.cs">
+      <DependentUpon>AccessoryAllotEnterTransferOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccessoryAllotExitTransferIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccessoryAllotExitTransferIn.Designer.cs">
+      <DependentUpon>AccessoryAllotExitTransferIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccessoryAllotExitTransferOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccessoryAllotExitTransferOut.Designer.cs">
+      <DependentUpon>AccessoryAllotExitTransferOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccessoryAllotTranferInDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccessoryAllotTranferInDetail.Designer.cs">
+      <DependentUpon>AccessoryAllotTranferInDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccessoryAllotTranferInSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccessoryAllotTranferInSearch.Designer.cs">
+      <DependentUpon>AccessoryAllotTranferInSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccessoryAllotTranferOutDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccessoryAllotTranferOutDetail.Designer.cs">
+      <DependentUpon>AccessoryAllotTranferOutDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccessoryAllotTranferOutSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccessoryAllotTranferOutSearch.Designer.cs">
+      <DependentUpon>AccessoryAllotTranferOutSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccessoryProcurementDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccessoryProcurementDetail.Designer.cs">
+      <DependentUpon>AccessoryProcurementDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccessoryProcurementEnter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccessoryProcurementEnter.Designer.cs">
+      <DependentUpon>AccessoryProcurementEnter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccessoryProcurementExit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccessoryProcurementExit.Designer.cs">
+      <DependentUpon>AccessoryProcurementExit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccessoryProcurementSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccessoryProcurementSearch.Designer.cs">
+      <DependentUpon>AccessoryProcurementSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccessoryReturnDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccessoryReturnDetail.Designer.cs">
+      <DependentUpon>AccessoryReturnDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccessoryReturnEnter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccessoryReturnEnter.Designer.cs">
+      <DependentUpon>AccessoryReturnEnter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccessoryReturnExit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccessoryReturnExit.Designer.cs">
+      <DependentUpon>AccessoryReturnExit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccessoryReturnSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccessoryReturnSearch.Designer.cs">
+      <DependentUpon>AccessoryReturnSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllotEnterTranferIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllotEnterTranferIn.Designer.cs">
+      <DependentUpon>AllotEnterTranferIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllotEnterTranferOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllotEnterTranferOut.Designer.cs">
+      <DependentUpon>AllotEnterTranferOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllotExitTranferIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllotExitTranferIn.Designer.cs">
+      <DependentUpon>AllotExitTranferIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllotExitTranferOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllotExitTranferOut.Designer.cs">
+      <DependentUpon>AllotExitTranferOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllotTranferInDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllotTranferInDetail.Designer.cs">
+      <DependentUpon>AllotTranferInDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllotTranferInSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllotTranferInSearch.Designer.cs">
+      <DependentUpon>AllotTranferInSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllotTranferOutDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllotTranferOutDetail.Designer.cs">
+      <DependentUpon>AllotTranferOutDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllotTranferOutSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllotTranferOutSearch.Designer.cs">
+      <DependentUpon>AllotTranferOutSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AuthorityManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuthorityManage.Designer.cs">
+      <DependentUpon>AuthorityManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeComputerName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeComputerName.Designer.cs">
+      <DependentUpon>ChangeComputerName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common.cs" />
+    <Compile Include="Slps\SlpsRawMaterialReturnEnter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Slps\SlpsRawMaterialReturnEnter.Designer.cs">
+      <DependentUpon>SlpsRawMaterialReturnEnter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Slps\SlpsRawMaterialReturnExit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Slps\SlpsRawMaterialReturnExit.Designer.cs">
+      <DependentUpon>SlpsRawMaterialReturnExit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Slps\SlpsRawMaterialsProcurementExit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Slps\SlpsRawMaterialsProcurementExit.Designer.cs">
+      <DependentUpon>SlpsRawMaterialsProcurementExit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Slps\SlpsRawMaterialsProcurementEnter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Slps\SlpsRawMaterialsProcurementEnter.Designer.cs">
+      <DependentUpon>SlpsRawMaterialsProcurementEnter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Slps\SlpsRawMaterialsSaleExit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Slps\SlpsRawMaterialsSaleExit.Designer.cs">
+      <DependentUpon>SlpsRawMaterialsSaleExit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Slps\SlpsFinishedProductsSaleEnter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Slps\SlpsFinishedProductsSaleEnter.Designer.cs">
+      <DependentUpon>SlpsFinishedProductsSaleEnter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Slps\SlpsEnter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Slps\SlpsEnter.Designer.cs">
+      <DependentUpon>SlpsEnter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinishedProductsExchangeOutSearchDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinishedProductsExchangeOutSearchDetail.Designer.cs">
+      <DependentUpon>FinishedProductsExchangeOutSearchDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinishedProductsExchangeOutSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinishedProductsExchangeOutSearch.Designer.cs">
+      <DependentUpon>FinishedProductsExchangeOutSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinishedProductsExchangeOutEnter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinishedProductsExchangeOutEnter.Designer.cs">
+      <DependentUpon>FinishedProductsExchangeOutEnter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinishedProductsExchangeOutExit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinishedProductsExchangeOutExit.Designer.cs">
+      <DependentUpon>FinishedProductsExchangeOutExit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinishedProductsExchangeInExit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinishedProductsExchangeInExit.Designer.cs">
+      <DependentUpon>FinishedProductsExchangeInExit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinishedProductsExchangeInEnter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinishedProductsExchangeInEnter.Designer.cs">
+      <DependentUpon>FinishedProductsExchangeInEnter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinishedProductsExchangeInSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinishedProductsExchangeInSearch.Designer.cs">
+      <DependentUpon>FinishedProductsExchangeInSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinishedProductsExchangeInSearchDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinishedProductsExchangeInSearchDetail.Designer.cs">
+      <DependentUpon>FinishedProductsExchangeInSearchDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinishProductSaleContractManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinishProductSaleContractManage.Designer.cs">
+      <DependentUpon>FinishProductSaleContractManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinishProductSaleContractEnter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinishProductSaleContractEnter.Designer.cs">
+      <DependentUpon>FinishProductSaleContractEnter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataHistoryDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataHistoryDetail.Designer.cs">
+      <DependentUpon>DataHistoryDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataHistorySearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataHistorySearch.Designer.cs">
+      <DependentUpon>DataHistorySearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBReadPortSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DBReadPortSetting.Designer.cs">
+      <DependentUpon>DBReadPortSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Feedback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Feedback.Designer.cs">
+      <DependentUpon>Feedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FeedbackSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FeedbackSearch.Designer.cs">
+      <DependentUpon>FeedbackSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinishedProductsSaleEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinishedProductsSaleEdit.Designer.cs">
+      <DependentUpon>FinishedProductsSaleEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinishedProductsSaleManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinishedProductsSaleManage.Designer.cs">
+      <DependentUpon>FinishedProductsSaleManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinishProductSaleContractExit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinishProductSaleContractExit.Designer.cs">
+      <DependentUpon>FinishProductSaleContractExit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinishProductSaleContractSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinishProductSaleContractSearch.Designer.cs">
+      <DependentUpon>FinishProductSaleContractSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinishedProductsExchangeInPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinishedProductsExchangeInPrint.Designer.cs">
+      <DependentUpon>FinishedProductsExchangeInPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FlotsamManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FlotsamManage.Designer.cs">
+      <DependentUpon>FlotsamManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FlotsamManageDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FlotsamManageDetail.Designer.cs">
+      <DependentUpon>FlotsamManageDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoadometerDiff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadometerDiff.Designer.cs">
+      <DependentUpon>LoadometerDiff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlPanel.Designer.cs">
+      <DependentUpon>ControlPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinishedProductsPresentationDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinishedProductsPresentationDetails.Designer.cs">
+      <DependentUpon>FinishedProductsPresentationDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinishedProductsPresentationEnter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinishedProductsPresentationEnter.Designer.cs">
+      <DependentUpon>FinishedProductsPresentationEnter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinishedProductsPresentationExit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinishedProductsPresentationExit.Designer.cs">
+      <DependentUpon>FinishedProductsPresentationExit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinishedProductsPresentationSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinishedProductsPresentationSearch.Designer.cs">
+      <DependentUpon>FinishedProductsPresentationSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinishedProductsSaleExit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinishedProductsSaleExit.Designer.cs">
+      <DependentUpon>FinishedProductsSaleExit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinishedProductsSaleSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinishedProductsSaleSearch.Designer.cs">
+      <DependentUpon>FinishedProductsSaleSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinishedProSaleSearchDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinishedProSaleSearchDetail.Designer.cs">
+      <DependentUpon>FinishedProSaleSearchDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFunctionsAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFunctionsAdd.Designer.cs">
+      <DependentUpon>FormFunctionsAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HouseKeeperManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HouseKeeperManage.Designer.cs">
+      <DependentUpon>HouseKeeperManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Slps\ScanCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Slps\ScanCode.Designer.cs">
+      <DependentUpon>ScanCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Slps\SlpsRawMaterialsSaleEnter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Slps\SlpsRawMaterialsSaleEnter.Designer.cs">
+      <DependentUpon>SlpsRawMaterialsSaleEnter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StorageType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StorageType.Designer.cs">
+      <DependentUpon>StorageType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PackWeight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PackWeight.Designer.cs">
+      <DependentUpon>PackWeight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PageChangeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PageChangeControl.Designer.cs">
+      <DependentUpon>PageChangeControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductReturnMerchantDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductReturnMerchantDetail.Designer.cs">
+      <DependentUpon>ProductReturnMerchantDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductReturnMerchantEnter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductReturnMerchantEnter.Designer.cs">
+      <DependentUpon>ProductReturnMerchantEnter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductReturnMerchantExit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductReturnMerchantExit.Designer.cs">
+      <DependentUpon>ProductReturnMerchantExit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductReturnMerchantSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductReturnMerchantSearch.Designer.cs">
+      <DependentUpon>ProductReturnMerchantSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductReturnRailwayDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductReturnRailwayDetail.Designer.cs">
+      <DependentUpon>ProductReturnRailwayDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductReturnRailwayEnter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductReturnRailwayEnter.Designer.cs">
+      <DependentUpon>ProductReturnRailwayEnter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductReturnRailwayExit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductReturnRailwayExit.Designer.cs">
+      <DependentUpon>ProductReturnRailwayExit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductReturnRailwaySearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductReturnRailwaySearch.Designer.cs">
+      <DependentUpon>ProductReturnRailwaySearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="ExcelProgressBar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExcelProgressBar.Designer.cs">
+      <DependentUpon>ExcelProgressBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RawMaterialReturnDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RawMaterialReturnDetail.Designer.cs">
+      <DependentUpon>RawMaterialReturnDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RawMaterialReturnEnter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RawMaterialReturnEnter.Designer.cs">
+      <DependentUpon>RawMaterialReturnEnter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RawMaterialReturnExit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RawMaterialReturnExit.Designer.cs">
+      <DependentUpon>RawMaterialReturnExit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RawMaterialReturnSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RawMaterialReturnSearch.Designer.cs">
+      <DependentUpon>RawMaterialReturnSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RawMaterialsProcurementDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RawMaterialsProcurementDetails.Designer.cs">
+      <DependentUpon>RawMaterialsProcurementDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RawMaterialsContractEnter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RawMaterialsContractEnter.Designer.cs">
+      <DependentUpon>RawMaterialsContractEnter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RawMaterialsProcurementEnter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RawMaterialsProcurementEnter.Designer.cs">
+      <DependentUpon>RawMaterialsProcurementEnter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RawMaterialsContractExit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RawMaterialsContractExit.Designer.cs">
+      <DependentUpon>RawMaterialsContractExit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RawMaterialsProcurementExit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RawMaterialsProcurementExit.Designer.cs">
+      <DependentUpon>RawMaterialsProcurementExit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RawMaterialsContractManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RawMaterialsContractManage.Designer.cs">
+      <DependentUpon>RawMaterialsContractManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RawMaterialsContractSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RawMaterialsContractSearch.Designer.cs">
+      <DependentUpon>RawMaterialsContractSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RawMaterialsProcurementSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RawMaterialsProcurementSearch.Designer.cs">
+      <DependentUpon>RawMaterialsProcurementSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RawMaterialsSaleDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RawMaterialsSaleDetails.Designer.cs">
+      <DependentUpon>RawMaterialsSaleDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RawMaterialsSaleSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RawMaterialsSaleSearch.Designer.cs">
+      <DependentUpon>RawMaterialsSaleSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RolesManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RolesManage.Designer.cs">
+      <DependentUpon>RolesManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SaleOrgManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaleOrgManage.Designer.cs">
+      <DependentUpon>SaleOrgManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SAPHelper.cs" />
+    <Compile Include="sdldbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sdldbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FinishedProductsSaleEnter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinishedProductsSaleEnter.Designer.cs">
+      <DependentUpon>FinishedProductsSaleEnter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RawMaterialsSaleEnter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RawMaterialsSaleEnter.Designer.cs">
+      <DependentUpon>RawMaterialsSaleEnter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RawMaterialsSaleExit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RawMaterialsSaleExit.Designer.cs">
+      <DependentUpon>RawMaterialsSaleExit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Station.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Station.Designer.cs">
+      <DependentUpon>Station.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFinishedProductsSaleEnter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFinishedProductsSaleEnter.Designer.cs">
+      <DependentUpon>SubFinishedProductsSaleEnter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Slps\SlpsFinishedProductsSaleExit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Slps\SlpsFinishedProductsSaleExit.Designer.cs">
+      <DependentUpon>SlpsFinishedProductsSaleExit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFinishedProductsSaleExit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFinishedProductsSaleExit.Designer.cs">
+      <DependentUpon>SubFinishedProductsSaleExit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubProductReturnMerchantEnter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubProductReturnMerchantEnter.Designer.cs">
+      <DependentUpon>SubProductReturnMerchantEnter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubProductReturnMerchantExit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubProductReturnMerchantExit.Designer.cs">
+      <DependentUpon>SubProductReturnMerchantExit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Slps\SlpsProductReturnEnter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Slps\SlpsProductReturnEnter.Designer.cs">
+      <DependentUpon>SlpsProductReturnEnter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubProductReturnRailwayEnter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubProductReturnRailwayEnter.Designer.cs">
+      <DependentUpon>SubProductReturnRailwayEnter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Slps\SlpsProductReturnExit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Slps\SlpsProductReturnExit.Designer.cs">
+      <DependentUpon>SlpsProductReturnExit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubProductReturnRailwayExit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubProductReturnRailwayExit.Designer.cs">
+      <DependentUpon>SubProductReturnRailwayExit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrayWeight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrayWeight.Designer.cs">
+      <DependentUpon>TrayWeight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TruckSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TruckSelect.Designer.cs">
+      <DependentUpon>TruckSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserGuide.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserGuide.Designer.cs">
+      <DependentUpon>UserGuide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserManage.Designer.cs">
+      <DependentUpon>UserManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductReturnMerchantManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductReturnMerchantManage.Designer.cs">
+      <DependentUpon>ProductReturnMerchantManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductReturnMerchantEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductReturnMerchantEdit.Designer.cs">
+      <DependentUpon>ProductReturnMerchantEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductReturnRailwayManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductReturnRailwayManage.Designer.cs">
+      <DependentUpon>ProductReturnRailwayManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductReturnRailwayEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductReturnRailwayEdit.Designer.cs">
+      <DependentUpon>ProductReturnRailwayEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinishedProductsPresentationManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinishedProductsPresentationManage.Designer.cs">
+      <DependentUpon>FinishedProductsPresentationManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinishedProductsPresentationEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinishedProductsPresentationEdit.Designer.cs">
+      <DependentUpon>FinishedProductsPresentationEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RawMaterialsSaleManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RawMaterialsSaleManage.Designer.cs">
+      <DependentUpon>RawMaterialsSaleManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RawMaterialsSaleEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RawMaterialsSaleEdit.Designer.cs">
+      <DependentUpon>RawMaterialsSaleEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RawMaterialsProcurementEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RawMaterialsProcurementEdit.Designer.cs">
+      <DependentUpon>RawMaterialsProcurementEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RawMaterialsProcurementManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RawMaterialsProcurementManage.Designer.cs">
+      <DependentUpon>RawMaterialsProcurementManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RawMaterialReturnEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RawMaterialReturnEdit.Designer.cs">
+      <DependentUpon>RawMaterialReturnEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RawMaterialReturnManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RawMaterialReturnManage.Designer.cs">
+      <DependentUpon>RawMaterialReturnManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccessoryAllotTransferOutManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccessoryAllotTransferOutManage.Designer.cs">
+      <DependentUpon>AccessoryAllotTransferOutManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccessoryAllotTransferOutEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccessoryAllotTransferOutEdit.Designer.cs">
+      <DependentUpon>AccessoryAllotTransferOutEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccessoryAllotTransferInManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccessoryAllotTransferInManage.Designer.cs">
+      <DependentUpon>AccessoryAllotTransferInManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccessoryAllotTransferInEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccessoryAllotTransferInEdit.Designer.cs">
+      <DependentUpon>AccessoryAllotTransferInEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllotTranferOutManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllotTranferOutManage.Designer.cs">
+      <DependentUpon>AllotTranferOutManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllotTranferOutEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllotTranferOutEdit.Designer.cs">
+      <DependentUpon>AllotTranferOutEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllotTranferInManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllotTranferInManage.Designer.cs">
+      <DependentUpon>AllotTranferInManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllotTranferInEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllotTranferInEdit.Designer.cs">
+      <DependentUpon>AllotTranferInEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccessoryProcurementManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccessoryProcurementManage.Designer.cs">
+      <DependentUpon>AccessoryProcurementManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccessoryProcurementEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccessoryProcurementEdit.Designer.cs">
+      <DependentUpon>AccessoryProcurementEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccessoryReturnManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccessoryReturnManage.Designer.cs">
+      <DependentUpon>AccessoryReturnManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccessoryReturnEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccessoryReturnEdit.Designer.cs">
+      <DependentUpon>AccessoryReturnEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FloatsamEnter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FloatsamEnter.Designer.cs">
+      <DependentUpon>FloatsamEnter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FlotsamExit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FlotsamExit.Designer.cs">
+      <DependentUpon>FlotsamExit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FlotsamSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FlotsamSearch.Designer.cs">
+      <DependentUpon>FlotsamSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FlotsamSearchDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FlotsamSearchDetail.Designer.cs">
+      <DependentUpon>FlotsamSearchDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FlotManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FlotManage.Designer.cs">
+      <DependentUpon>FlotManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FlotsamDetailPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FlotsamDetailPrint.Designer.cs">
+      <DependentUpon>FlotsamDetailPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RawMaterialsProcurementDetailsPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RawMaterialsProcurementDetailsPrint.Designer.cs">
+      <DependentUpon>RawMaterialsProcurementDetailsPrint.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccessoryAllotEnterTransferIn.resx">
+      <DependentUpon>AccessoryAllotEnterTransferIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccessoryAllotEnterTransferOut.resx">
+      <DependentUpon>AccessoryAllotEnterTransferOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccessoryAllotExitTransferIn.resx">
+      <DependentUpon>AccessoryAllotExitTransferIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccessoryAllotExitTransferOut.resx">
+      <DependentUpon>AccessoryAllotExitTransferOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccessoryAllotTranferInDetail.resx">
+      <DependentUpon>AccessoryAllotTranferInDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccessoryAllotTranferInSearch.resx">
+      <DependentUpon>AccessoryAllotTranferInSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccessoryAllotTranferOutDetail.resx">
+      <DependentUpon>AccessoryAllotTranferOutDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccessoryAllotTranferOutSearch.resx">
+      <DependentUpon>AccessoryAllotTranferOutSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccessoryProcurementDetail.resx">
+      <DependentUpon>AccessoryProcurementDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccessoryProcurementEnter.resx">
+      <DependentUpon>AccessoryProcurementEnter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccessoryProcurementExit.resx">
+      <DependentUpon>AccessoryProcurementExit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccessoryProcurementSearch.resx">
+      <DependentUpon>AccessoryProcurementSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccessoryReturnDetail.resx">
+      <DependentUpon>AccessoryReturnDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccessoryReturnEnter.resx">
+      <DependentUpon>AccessoryReturnEnter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccessoryReturnExit.resx">
+      <DependentUpon>AccessoryReturnExit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccessoryReturnSearch.resx">
+      <DependentUpon>AccessoryReturnSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllotEnterTranferIn.resx">
+      <DependentUpon>AllotEnterTranferIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllotEnterTranferOut.resx">
+      <DependentUpon>AllotEnterTranferOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllotExitTranferIn.resx">
+      <DependentUpon>AllotExitTranferIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllotExitTranferOut.resx">
+      <DependentUpon>AllotExitTranferOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllotTranferInDetail.resx">
+      <DependentUpon>AllotTranferInDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllotTranferInSearch.resx">
+      <DependentUpon>AllotTranferInSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllotTranferOutDetail.resx">
+      <DependentUpon>AllotTranferOutDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllotTranferOutSearch.resx">
+      <DependentUpon>AllotTranferOutSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuthorityManage.resx">
+      <DependentUpon>AuthorityManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeComputerName.resx">
+      <DependentUpon>ChangeComputerName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Slps\SlpsRawMaterialReturnEnter.resx">
+      <DependentUpon>SlpsRawMaterialReturnEnter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Slps\SlpsRawMaterialReturnExit.resx">
+      <DependentUpon>SlpsRawMaterialReturnExit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Slps\SlpsRawMaterialsProcurementExit.resx">
+      <DependentUpon>SlpsRawMaterialsProcurementExit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Slps\SlpsRawMaterialsProcurementEnter.resx">
+      <DependentUpon>SlpsRawMaterialsProcurementEnter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Slps\SlpsRawMaterialsSaleExit.resx">
+      <DependentUpon>SlpsRawMaterialsSaleExit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Slps\SlpsFinishedProductsSaleEnter.resx">
+      <DependentUpon>SlpsFinishedProductsSaleEnter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Slps\SlpsEnter.resx">
+      <DependentUpon>SlpsEnter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinishedProductsExchangeOutSearchDetail.resx">
+      <DependentUpon>FinishedProductsExchangeOutSearchDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinishedProductsExchangeOutSearch.resx">
+      <DependentUpon>FinishedProductsExchangeOutSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinishedProductsExchangeOutEnter.resx">
+      <DependentUpon>FinishedProductsExchangeOutEnter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinishedProductsExchangeOutExit.resx">
+      <DependentUpon>FinishedProductsExchangeOutExit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinishedProductsExchangeInExit.resx">
+      <DependentUpon>FinishedProductsExchangeInExit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinishedProductsExchangeInEnter.resx">
+      <DependentUpon>FinishedProductsExchangeInEnter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinishedProductsExchangeInSearch.resx">
+      <DependentUpon>FinishedProductsExchangeInSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinishedProductsExchangeInSearchDetail.resx">
+      <DependentUpon>FinishedProductsExchangeInSearchDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinishProductSaleContractManage.resx">
+      <DependentUpon>FinishProductSaleContractManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinishProductSaleContractEnter.resx">
+      <DependentUpon>FinishProductSaleContractEnter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataHistoryDetail.resx">
+      <DependentUpon>DataHistoryDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataHistorySearch.resx">
+      <DependentUpon>DataHistorySearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DBReadPortSetting.resx">
+      <DependentUpon>DBReadPortSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Feedback.resx">
+      <DependentUpon>Feedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FeedbackSearch.resx">
+      <DependentUpon>FeedbackSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinishedProductsSaleEdit.resx">
+      <DependentUpon>FinishedProductsSaleEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinishedProductsSaleManage.resx">
+      <DependentUpon>FinishedProductsSaleManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinishProductSaleContractExit.resx">
+      <DependentUpon>FinishProductSaleContractExit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinishProductSaleContractSearch.resx">
+      <DependentUpon>FinishProductSaleContractSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinishedProductsExchangeInPrint.resx">
+      <DependentUpon>FinishedProductsExchangeInPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FlotsamManage.resx">
+      <DependentUpon>FlotsamManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FlotsamManageDetail.resx">
+      <DependentUpon>FlotsamManageDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadometerDiff.resx">
+      <DependentUpon>LoadometerDiff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlPanel.resx">
+      <DependentUpon>ControlPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinishedProductsPresentationDetails.resx">
+      <DependentUpon>FinishedProductsPresentationDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinishedProductsPresentationEnter.resx">
+      <DependentUpon>FinishedProductsPresentationEnter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinishedProductsPresentationExit.resx">
+      <DependentUpon>FinishedProductsPresentationExit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinishedProductsPresentationSearch.resx">
+      <DependentUpon>FinishedProductsPresentationSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinishedProductsSaleExit.resx">
+      <DependentUpon>FinishedProductsSaleExit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinishedProductsSaleSearch.resx">
+      <DependentUpon>FinishedProductsSaleSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinishedProSaleSearchDetail.resx">
+      <DependentUpon>FinishedProSaleSearchDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFunctionsAdd.resx">
+      <DependentUpon>FormFunctionsAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HouseKeeperManage.resx">
+      <DependentUpon>HouseKeeperManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Slps\ScanCode.resx">
+      <DependentUpon>ScanCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Slps\SlpsRawMaterialsSaleEnter.resx">
+      <DependentUpon>SlpsRawMaterialsSaleEnter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StorageType.resx">
+      <DependentUpon>StorageType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PackWeight.resx">
+      <DependentUpon>PackWeight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PageChangeControl.resx">
+      <DependentUpon>PageChangeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductReturnMerchantDetail.resx">
+      <DependentUpon>ProductReturnMerchantDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductReturnMerchantEnter.resx">
+      <DependentUpon>ProductReturnMerchantEnter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductReturnMerchantExit.resx">
+      <DependentUpon>ProductReturnMerchantExit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductReturnMerchantSearch.resx">
+      <DependentUpon>ProductReturnMerchantSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductReturnRailwayDetail.resx">
+      <DependentUpon>ProductReturnRailwayDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductReturnRailwayEnter.resx">
+      <DependentUpon>ProductReturnRailwayEnter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductReturnRailwayExit.resx">
+      <DependentUpon>ProductReturnRailwayExit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductReturnRailwaySearch.resx">
+      <DependentUpon>ProductReturnRailwaySearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExcelProgressBar.resx">
+      <DependentUpon>ExcelProgressBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="FinishedProductsSaleEnter.resx">
+      <DependentUpon>FinishedProductsSaleEnter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RawMaterialReturnDetail.resx">
+      <DependentUpon>RawMaterialReturnDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RawMaterialReturnEnter.resx">
+      <DependentUpon>RawMaterialReturnEnter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RawMaterialReturnExit.resx">
+      <DependentUpon>RawMaterialReturnExit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RawMaterialReturnSearch.resx">
+      <DependentUpon>RawMaterialReturnSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RawMaterialsProcurementDetails.resx">
+      <DependentUpon>RawMaterialsProcurementDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RawMaterialsContractEnter.resx">
+      <DependentUpon>RawMaterialsContractEnter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RawMaterialsProcurementEnter.resx">
+      <DependentUpon>RawMaterialsProcurementEnter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RawMaterialsContractExit.resx">
+      <DependentUpon>RawMaterialsContractExit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RawMaterialsProcurementExit.resx">
+      <DependentUpon>RawMaterialsProcurementExit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RawMaterialsContractManage.resx">
+      <DependentUpon>RawMaterialsContractManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RawMaterialsContractSearch.resx">
+      <DependentUpon>RawMaterialsContractSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RawMaterialsProcurementSearch.resx">
+      <DependentUpon>RawMaterialsProcurementSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RawMaterialsSaleDetails.resx">
+      <DependentUpon>RawMaterialsSaleDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RawMaterialsSaleSearch.resx">
+      <DependentUpon>RawMaterialsSaleSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RolesManage.resx">
+      <DependentUpon>RolesManage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaleOrgManage.resx">
+      <DependentUpon>SaleOrgManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RawMaterialsSaleEnter.resx">
+      <DependentUpon>RawMaterialsSaleEnter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RawMaterialsSaleExit.resx">
+      <DependentUpon>RawMaterialsSaleExit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Station.resx">
+      <DependentUpon>Station.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFinishedProductsSaleEnter.resx">
+      <DependentUpon>SubFinishedProductsSaleEnter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Slps\SlpsFinishedProductsSaleExit.resx">
+      <DependentUpon>SlpsFinishedProductsSaleExit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFinishedProductsSaleExit.resx">
+      <DependentUpon>SubFinishedProductsSaleExit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubProductReturnMerchantEnter.resx">
+      <DependentUpon>SubProductReturnMerchantEnter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubProductReturnMerchantExit.resx">
+      <DependentUpon>SubProductReturnMerchantExit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Slps\SlpsProductReturnEnter.resx">
+      <DependentUpon>SlpsProductReturnEnter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubProductReturnRailwayEnter.resx">
+      <DependentUpon>SubProductReturnRailwayEnter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Slps\SlpsProductReturnExit.resx">
+      <DependentUpon>SlpsProductReturnExit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubProductReturnRailwayExit.resx">
+      <DependentUpon>SubProductReturnRailwayExit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrayWeight.resx">
+      <DependentUpon>TrayWeight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TruckSelect.resx">
+      <DependentUpon>TruckSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserGuide.resx">
+      <DependentUpon>UserGuide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManage.resx">
+      <DependentUpon>UserManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductReturnMerchantManage.resx">
+      <DependentUpon>ProductReturnMerchantManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductReturnMerchantEdit.resx">
+      <DependentUpon>ProductReturnMerchantEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductReturnRailwayManage.resx">
+      <DependentUpon>ProductReturnRailwayManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductReturnRailwayEdit.resx">
+      <DependentUpon>ProductReturnRailwayEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinishedProductsPresentationManage.resx">
+      <DependentUpon>FinishedProductsPresentationManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinishedProductsPresentationEdit.resx">
+      <DependentUpon>FinishedProductsPresentationEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RawMaterialsSaleManage.resx">
+      <DependentUpon>RawMaterialsSaleManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RawMaterialsSaleEdit.resx">
+      <DependentUpon>RawMaterialsSaleEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RawMaterialsProcurementEdit.resx">
+      <DependentUpon>RawMaterialsProcurementEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RawMaterialsProcurementManage.resx">
+      <DependentUpon>RawMaterialsProcurementManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RawMaterialReturnEdit.resx">
+      <DependentUpon>RawMaterialReturnEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RawMaterialReturnManage.resx">
+      <DependentUpon>RawMaterialReturnManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccessoryAllotTransferOutManage.resx">
+      <DependentUpon>AccessoryAllotTransferOutManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccessoryAllotTransferOutEdit.resx">
+      <DependentUpon>AccessoryAllotTransferOutEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccessoryAllotTransferInManage.resx">
+      <DependentUpon>AccessoryAllotTransferInManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccessoryAllotTransferInEdit.resx">
+      <DependentUpon>AccessoryAllotTransferInEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllotTranferOutManage.resx">
+      <DependentUpon>AllotTranferOutManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllotTranferOutEdit.resx">
+      <DependentUpon>AllotTranferOutEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllotTranferInManage.resx">
+      <DependentUpon>AllotTranferInManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllotTranferInEdit.resx">
+      <DependentUpon>AllotTranferInEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccessoryProcurementManage.resx">
+      <DependentUpon>AccessoryProcurementManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccessoryProcurementEdit.resx">
+      <DependentUpon>AccessoryProcurementEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccessoryReturnManage.resx">
+      <DependentUpon>AccessoryReturnManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccessoryReturnEdit.resx">
+      <DependentUpon>AccessoryReturnEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FloatsamEnter.resx">
+      <DependentUpon>FloatsamEnter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FlotsamExit.resx">
+      <DependentUpon>FlotsamExit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FlotsamSearch.resx">
+      <DependentUpon>FlotsamSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FlotsamSearchDetail.resx">
+      <DependentUpon>FlotsamSearchDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FlotManage.resx">
+      <DependentUpon>FlotManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FlotsamDetailPrint.resx">
+      <DependentUpon>FlotsamDetailPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RawMaterialsProcurementDetailsPrint.resx">
+      <DependentUpon>RawMaterialsProcurementDetailsPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="DBSolution_TemporaryKey.pfx" />
+    <None Include="Properties\app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="sdldbDataSet.xsc">
+      <DependentUpon>sdldbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="sdldbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sdldbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sdldbDataSet.xss">
+      <DependentUpon>sdldbDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\01.png" />
+    <None Include="Resources\serverdown.png" />
+    <None Include="Resources\serverok.png" />
+    <Content Include="Resources\barner_logo.jpg" />
+    <Content Include="Resources\goodbye.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\Iconnew.ico" />
+    <Content Include="Resources\print.gif" />
+    <Content Include="Resources\Sdlnewicon.ico" />
+    <Content Include="Resources\Sdlnewicon2.ico" />
+    <Content Include="Resources\welcome.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SdlDB.Settings.Temp.dll">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Resources\02.PNG" />
+    <Content Include="Resources\03.PNG" />
+    <Content Include="Resources\04.PNG" />
+    <Content Include="Resources\05.PNG" />
+    <Content Include="Resources\06.PNG" />
+    <Content Include="Resources\07.PNG" />
+    <Content Include="Resources\08.PNG" />
+    <Content Include="Resources\09.PNG" />
+    <Content Include="Resources\5.ico" />
+    <None Include="Resources\bg1.jpg" />
+    <Content Include="Resources\Close.png" />
+    <None Include="Resources\DBLogo1.png" />
+    <Content Include="Resources\Edit.png" />
+    <Content Include="Resources\Lock.png" />
+    <None Include="Resources\Revert.png" />
+    <None Include="Resources\Logo2.png" />
+    <Content Include="Resources\sdl.ico" />
+    <Content Include="Resources\1.ico" />
+    <Content Include="Resources\2.ico" />
+    <Content Include="Resources\3.ico" />
+    <Content Include="Resources\4.ico" />
+    <EmbeddedResource Include="Resources\上一页.gif" />
+    <EmbeddedResource Include="Resources\下一页.gif" />
+    <EmbeddedResource Include="Resources\尾页.gif" />
+    <EmbeddedResource Include="Resources\首页.gif" />
+    <Content Include="Resources\Unlock.png" />
+    <Content Include="SdlDB.Settings.dll">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Resources\bg.jpg" />
+    <Content Include="Resources\保存.ico" />
+    <Content Include="Resources\修改.ico" />
+    <Content Include="Resources\删除.ico" />
+    <Content Include="Resources\删除1.ico" />
+    <Content Include="Resources\取消.ico" />
+    <Content Include="Resources\添加.ico" />
+    <Content Include="Resources\退出.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SdlDB.Data.SqlServer\SdlDB.Data.SqlServer.csproj">
+      <Project>{42212c76-cf4d-4fa8-ab49-bbe4b5ce0cc7}</Project>
+      <Name>SdlDB.Data.SqlServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SdlDB.Data\SdlDB.Data.csproj">
+      <Project>{23724225-a5d0-4cd6-9014-69cfd5b3fabf}</Project>
+      <Name>SdlDB.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SdlDB.Entity\SdlDB.Entity.csproj">
+      <Project>{5bc7dd5e-ea15-4e31-b38d-3f5814ef2740}</Project>
+      <Name>SdlDB.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SdlDB.Utility\SdlDB.Utility.csproj">
+      <Project>{B9EC863E-23CA-4DFE-B23A-A52B783D8706}</Project>
+      <Name>SdlDB.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="Resources\01.png">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Resources\03.PNG">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Resources\04.PNG">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Resources\05.PNG">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Resources\06.PNG">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Resources\07.PNG">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Resources\08.PNG">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Resources\09.PNG">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Resources\1.ico">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Resources\2.ico">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Resources\3.ico">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Resources\4.ico">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Resources\5.ico">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Resources\bg.jpg">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Resources\Close.png">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Resources\Edit.png">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Resources\Lock.png">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Resources\sdl.ico">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Resources\Unlock.png">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Resources\保存.ico">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Resources\修改.ico">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Resources\删除.ico">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Resources\删除1.ico">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Resources\取消.ico">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Resources\添加.ico">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Resources\退出.ico">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="SdlDB.Data">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DLL\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="SAPFunctionsOCX">
+      <Guid>{5B076C00-2F26-11CF-9AE5-0800096E19F4}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="SAPLogonCtrl">
+      <Guid>{B24944D9-1501-11CF-8981-0000E8A49FA0}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="SAPTableFactoryCtrl">
+      <Guid>{87D28511-6B43-101C-92CE-10005AF5DF4D}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5BC7DD5E-EA15-4E31-B38D-3F5814EF2740}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SdlDB.Entity</RootNamespace>
+    <AssemblyName>SdlDB.Entity</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DemoTable.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sdl_AccessoryAllotInDetail.cs" />
+    <Compile Include="Sdl_AccessoryAllotInTitle.cs" />
+    <Compile Include="Sdl_AccessoryAllotOutDetail.cs" />
+    <Compile Include="Sdl_AccessoryAllotOutTitle.cs" />
+    <Compile Include="Sdl_AccessoryProcurementDetail.cs" />
+    <Compile Include="Sdl_AccessoryProcurementTitle.cs" />
+    <Compile Include="Sdl_AccessoryReturnDetail.cs" />
+    <Compile Include="Sdl_AccessoryReturnTitle.cs" />
+    <Compile Include="Sdl_AllotDetail.cs" />
+    <Compile Include="Sdl_AllotInDetail.cs" />
+    <Compile Include="Sdl_AllotInTitle.cs" />
+    <Compile Include="Sdl_AllotTitle.cs" />
+    <Compile Include="Sdl_Company.cs" />
+    <Compile Include="Sdl_DataHistory.cs" />
+    <Compile Include="Sdl_Feedback.cs" />
+    <Compile Include="Sdl_FinishedProductsExchangeTitle.cs" />
+    <Compile Include="Sdl_FinishedProductsExchange.cs" />
+    <Compile Include="sdl_FloatsamEnter.cs" />
+    <Compile Include="sdl_FloatsamNameItem.cs" />
+    <Compile Include="Sdl_LoadometerDiff.cs" />
+    <Compile Include="Sdl_Delivery_Type.cs" />
+    <Compile Include="Sdl_Factory.cs" />
+    <Compile Include="Sdl_FinishedProductsPresentation.cs" />
+    <Compile Include="Sdl_FinishedProductsPresentationTitle.cs" />
+    <Compile Include="Sdl_FinishedProductsSale.cs" />
+    <Compile Include="Sdl_FinishedProductsSaleTitle.cs" />
+    <Compile Include="Sdl_Functions.cs" />
+    <Compile Include="Sdl_FunctionsInRoles.cs" />
+    <Compile Include="Sdl_Manual.cs" />
+    <Compile Include="Slps_ProductsReturn.cs" />
+    <Compile Include="Slps_ProductsReturnDetail.cs" />
+    <Compile Include="Slps_FinishedProductsSaleDetail.cs" />
+    <Compile Include="Slps_FinishedProductsSale.cs" />
+    <Compile Include="Sdl_SlpsExit.cs" />
+    <Compile Include="Sdl_SlpsExitDetail.cs" />
+    <Compile Include="Sdl_SlpsEnterDetail.cs" />
+    <Compile Include="Sdl_StorageType.cs" />
+    <Compile Include="Sdl_PackWeight.cs" />
+    <Compile Include="Sdl_ProductReturnMerchant.cs" />
+    <Compile Include="Sdl_ProductReturnMerchantDetail.cs" />
+    <Compile Include="Sdl_ProductReturnRailway.cs" />
+    <Compile Include="Sdl_ProductReturnRailwayDetail.cs" />
+    <Compile Include="Sdl_RawMaterialReturnDetail.cs" />
+    <Compile Include="Sdl_RawMaterialReturnTitle.cs" />
+    <Compile Include="Sdl_RawMaterialsProcurement.cs" />
+    <Compile Include="Sdl_RawMaterialsProcurementTitle.cs" />
+    <Compile Include="Sdl_RawMaterialsSale.cs" />
+    <Compile Include="Sdl_RawMaterialsSaleTitle.cs" />
+    <Compile Include="Sdl_Roles.cs" />
+    <Compile Include="Sdl_Station.cs" />
+    <Compile Include="Sdl_TruckWeight.cs" />
+    <Compile Include="Sdl_Users.cs" />
+    <Compile Include="Sdl_SysSetting.cs" />
+    <Compile Include="Sdl_SlpsEnter.cs" />
+    <Compile Include="Sdl_Warehouse.cs" />
+    <Compile Include="Sdl_Sweight.cs" />
+    <Compile Include="Slps_RawMaterialsProcurement.cs" />
+    <Compile Include="Slps_RawMaterialsReturn.cs" />
+    <Compile Include="Slps_RawMaterialsSale.cs" />
+    <Compile Include="Slps_RawMaterialsProcurementDetail.cs" />
+    <Compile Include="Slps_RawMaterialsReturnDetail.cs" />
+    <Compile Include="Slps_RawMaterialsSaleDetail.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

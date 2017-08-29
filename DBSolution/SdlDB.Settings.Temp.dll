@@ -1,0 +1,320 @@
+<?xml version="1.0" standalone="yes"?>
+<settings>
+  <current>
+    <werks>2003</werks>
+    <id>2003北磅</id>
+    <com>COM1</com>
+    <db>db5</db>
+    <portflag>1</portflag>
+  </current>
+  <info>
+    <db1>
+      <model>2001东磅 宁波柯立D2008</model>
+      <id>2001东磅</id>
+      <werks>2001</werks>
+      <baudrate>9600</baudrate>
+      <parity>None</parity>
+      <databits>8</databits>
+      <stopbits>One</stopbits>
+      <order>false</order>
+      <regex>&#x2;\+(?&lt;weight&gt;\d+)\w{3}&#x3;</regex>
+    </db1>
+    <db2>
+      <model>2001西磅 耀华XK3190-A9+ 4800波特率</model>
+      <id>2001西磅</id>
+      <werks>2001</werks>
+      <baudrate>4800</baudrate>
+      <parity>None</parity>
+      <databits>8</databits>
+      <stopbits>One</stopbits>
+      <order>false</order>
+      <regex>&#x3;&#x2;\+(?&lt;weight&gt;\d+)\w\w\w&#x3;&#x2;\+</regex>
+    </db2>
+    <db3>
+      <model>2002 宁波柯力D2008</model>
+      <id>2002一磅</id>
+      <werks>2002</werks>
+      <baudrate>9600</baudrate>
+      <parity>None</parity>
+      <databits>8</databits>
+      <stopbits>One</stopbits>
+      <order>false</order>
+      <regex>&#x2;\+(?&lt;weight&gt;\d+)\w{3}&#x3;</regex>
+    </db3>
+    <db4>
+      <model>2003南磅 托利多XK3133</model>
+      <id>2003南磅</id>
+      <werks>2003</werks>
+      <baudrate>4800</baudrate>
+      <parity>None</parity>
+      <databits>8</databits>
+      <stopbits>One</stopbits>
+      <order>false</order>
+      <regex>&#x2;1.\s+(?&lt;weight&gt;\d+)\s+00</regex>
+    </db4>
+    <db5>
+      <model>2003北磅</model>
+      <id>2003北磅</id>
+      <werks>2003</werks>
+      <baudrate>2400</baudrate>
+      <parity>Even</parity>
+      <databits>7</databits>
+      <stopbits>One</stopbits>
+      <order>false</order>
+      <regex>\s+[\w\W]+?\+ (?&lt;weight&gt;\d+)kg\s+</regex>
+    </db5>
+    <db6>
+      <model>2101 济南金钟XK3102S</model>
+      <id>2101南磅</id>
+      <werks>2101</werks>
+      <baudrate>9600</baudrate>
+      <parity>None</parity>
+      <databits>8</databits>
+      <stopbits>One</stopbits>
+      <order>false</order>
+      <regex>&#x2;\+(?&lt;weight&gt;\d+)\w{3}&#x3;</regex>
+    </db6>
+    <db7>
+      <model>2101 济南金钟XK3102S</model>
+      <id>2101北磅</id>
+      <werks>2101</werks>
+      <baudrate>2400</baudrate>
+      <parity>Even</parity>
+      <databits>7</databits>
+      <stopbits>One</stopbits>
+      <order>false</order>
+      <regex>\s+[\w\W]+?\+ (?&lt;weight&gt;\d+)kg\s+</regex>
+    </db7>
+    <db8>
+      <model>2201 济南金钟XK3102S 贵港(#TO#)</model>
+      <id>2201一磅</id>
+      <werks>2201</werks>
+      <baudrate>2400</baudrate>
+      <parity>Even</parity>
+      <databits>7</databits>
+      <stopbits>One</stopbits>
+      <order>false</order>
+      <regex>[\w\W]+?\+(?&lt;weight&gt;\d+.\d+) t</regex>
+    </db8>
+    <db9>
+      <model>2301 耀华XK3190-D10</model>
+      <id>2301一磅</id>
+      <werks>2301</werks>
+      <baudrate>1200</baudrate>
+      <parity>None</parity>
+      <databits>8</databits>
+      <stopbits>One</stopbits>
+      <order>false</order>
+      <regex>&#x2;\+(?&lt;weight&gt;\d+)\w{3}&#x3;</regex>
+    </db9>
+    <db10>
+      <model>2002工厂2003南磅 耀华XK3190-D9 1200波特率</model>
+      <id>2002工厂2003南磅</id>
+      <werks>2002</werks>
+      <baudrate>1200</baudrate>
+      <parity>None</parity>
+      <databits>7</databits>
+      <stopbits>One</stopbits>
+      <order>false</order>
+      <regex>&#x3;&#x2;\+(?&lt;weight&gt;\d+)\w\w\w&#x3;&#x2;\+</regex>
+    </db10>
+    <db11>
+      <model>2002工厂2003北磅</model>
+      <id>2002工厂2003北磅</id>
+      <werks>2002</werks>
+      <baudrate>2400</baudrate>
+      <parity>Even</parity>
+      <databits>7</databits>
+      <stopbits>One</stopbits>
+      <order>false</order>
+      <regex>\s+[\w\W]+?\+ (?&lt;weight&gt;\d+)kg\s+</regex>
+    </db11>
+    <db12>
+      <model>2401东磅 宁波柯力D2008</model>
+      <id>2401东磅</id>
+      <werks>2401</werks>
+      <baudrate>9600</baudrate>
+      <parity>None</parity>
+      <databits>8</databits>
+      <stopbits>One</stopbits>
+      <order>false</order>
+      <regex>&#x2;\+(?&lt;weight&gt;\d+)\w{3}&#x3;</regex>
+    </db12>
+    <db13>
+      <model>2401西磅 宁波柯力D2008</model>
+      <id>2401西磅</id>
+      <werks>2401</werks>
+      <baudrate>9600</baudrate>
+      <parity>None</parity>
+      <databits>8</databits>
+      <stopbits>One</stopbits>
+      <order>false</order>
+      <regex>&#x2;\+(?&lt;weight&gt;\d+)\w{3}&#x3;</regex>
+    </db13>
+    <db14>
+      <model>2501西磅 耀华XK3190</model>
+      <id>2501西磅</id>
+      <werks>2501</werks>
+      <baudrate>4800</baudrate>
+      <parity>None</parity>
+      <databits>8</databits>
+      <stopbits>One</stopbits>
+      <order>false</order>
+      <regex>&#x2;\+(?&lt;weight&gt;\d+)\w\w\w&#x3;</regex>
+    </db14>
+    <db15>
+      <model>2501东磅 耀华XK3190</model>
+      <id>2501东磅</id>
+      <werks>2501</werks>
+      <baudrate>4800</baudrate>
+      <parity>None</parity>
+      <databits>8</databits>
+      <stopbits>One</stopbits>
+      <order>false</order>
+      <regex>&#x2;\+(?&lt;weight&gt;\d+)\w\w\w&#x3;</regex>
+    </db15>
+    <db16>
+      <model>2601北磅</model>
+      <id>2601北磅</id>
+      <werks>2601</werks>
+      <baudrate>2400</baudrate>
+      <parity>Even</parity>
+      <databits>7</databits>
+      <stopbits>One</stopbits>
+      <order>false</order>
+      <regex>\s+[\w\W]+?\+ (?&lt;weight&gt;\d+)kg\s+</regex>
+    </db16>
+    <db17>
+      <model>2601南磅</model>
+      <id>2601南磅</id>
+      <werks>2601</werks>
+      <baudrate>2400</baudrate>
+      <parity>Even</parity>
+      <databits>7</databits>
+      <stopbits>One</stopbits>
+      <order>false</order>
+      <regex>\s+[\w\W]+?\+ (?&lt;weight&gt;\d+)kg\s+</regex>
+    </db17>
+    <db18>
+      <model>2003中磅 托利多XK3133</model>
+      <id>2003中磅</id>
+      <werks>2003</werks>
+      <baudrate>4800</baudrate>
+      <parity>None</parity>
+      <databits>8</databits>
+      <stopbits>One</stopbits>
+      <order>false</order>
+      <regex>&#x2;1.\s+(?&lt;weight&gt;\d+)\s+00</regex>
+    </db18>
+    <db19>
+      <model>2003商砼站 托利多XK3133</model>
+      <id>商砼站</id>
+      <werks>2003</werks>
+      <baudrate>9600</baudrate>
+      <parity>None</parity>
+      <databits>8</databits>
+      <stopbits>One</stopbits>
+      <order>false</order>
+      <regex>\s\d{1,6}\s{1,4}</regex>
+    </db19>
+    <db20>
+      <model>2701 梅特勒SCS-120PN(3420)</model>
+      <id>2701北磅</id>
+      <werks>2007</werks>
+      <baudrate>9600</baudrate>
+      <parity>None</parity>
+      <databits>8</databits>
+      <stopbits>One</stopbits>
+      <order>false</order>
+      <regex>(?&lt;weight&gt;\s\d{1,7}\s{4})</regex>
+    </db20>
+    <db21>
+      <model>2701 梅特勒SCS-120PN(3420)</model>
+      <id>2701南磅</id>
+      <werks>2007</werks>
+      <baudrate>9600</baudrate>
+      <parity>None</parity>
+      <databits>8</databits>
+      <stopbits>One</stopbits>
+      <order>false</order>
+      <regex>(?&lt;weight&gt;\s\d{1,7}\s{4})</regex>
+    </db21>
+    <db22>
+      <model>2801 梅特勒SCS-120PN(3420)</model>
+      <id>2801北磅</id>
+      <werks>2801</werks>
+      <baudrate>9600</baudrate>
+      <parity>None</parity>
+      <databits>8</databits>
+      <stopbits>One</stopbits>
+      <order>false</order>
+      <regex>(?&lt;weight&gt;\s\d{1,7}\s{4})</regex>
+    </db22>
+    <db23>
+      <model>2801 梅特勒SCS-120PN(3420)</model>
+      <id>2801南磅</id>
+      <werks>2801</werks>
+      <baudrate>9600</baudrate>
+      <parity>None</parity>
+      <databits>8</databits>
+      <stopbits>One</stopbits>
+      <order>false</order>
+      <regex>(?&lt;weight&gt;\s\d{1,7}\s{4})</regex>
+    </db23>
+    <db24>
+      <model>3301 梅特勒SCS-120PN(3420)</model>
+      <id>3301德州</id>
+      <werks>3301</werks>
+      <baudrate>9600</baudrate>
+      <parity>None</parity>
+      <databits>8</databits>
+      <stopbits>One</stopbits>
+      <order>false</order>
+      <regex>(?&lt;weight&gt;\s\d{1,7}\s{4})</regex>
+    </db24>
+    <db25>
+      <model>3201 宁波柯力D2008</model>
+      <id>3201东磅</id>
+      <werks>3201</werks>
+      <baudrate>9600</baudrate>
+      <parity>None</parity>
+      <databits>8</databits>
+      <stopbits>One</stopbits>
+      <order>true</order>
+      <regex>(?&lt;weight&gt;\d+\w{3})</regex>
+    </db25>
+    <db26>
+      <model>3201 宁波柯力D2008</model>
+      <id>3201西磅</id>
+      <werks>3201</werks>
+      <baudrate>9600</baudrate>
+      <parity>None</parity>
+      <databits>8</databits>
+      <stopbits>One</stopbits>
+      <order>true</order>
+      <regex>(?&lt;weight&gt;\d+\w{3})</regex>
+    </db26>
+  <db27>
+      <model>5001南磅 托利多XK3133</model>
+      <id>5001南磅</id>
+      <werks>5001</werks>
+      <baudrate>4800</baudrate>
+      <parity>None</parity>
+      <databits>8</databits>
+      <stopbits>One</stopbits>
+      <order>false</order>
+      <regex>&#x2;1.\s+(?&lt;weight&gt;\d+)\s+00</regex>
+    </db27>
+    <db28>
+      <model>5001北磅</model>
+      <id>5001北磅</id>
+      <werks>5001</werks>
+      <baudrate>2400</baudrate>
+      <parity>Even</parity>
+      <databits>7</databits>
+      <stopbits>One</stopbits>
+      <order>false</order>
+      <regex>\s+[\w\W]+?\+ (?&lt;weight&gt;\d+)kg\s+</regex>
+    </db28>
+  </info>
+</settings>
