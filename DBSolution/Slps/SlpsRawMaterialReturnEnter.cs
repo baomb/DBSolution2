@@ -221,14 +221,18 @@ namespace DBSolution
             if (enterDataSet.Tables[0].Rows.Count > 0)
             {
                 textBoxCar.Text = enterDataSet.Tables[0].Rows[0]["carNo"].ToString();
+                //查询订单明细
+                DataSet slpsEnterDetail = Sdl_SlpsEnterDetailAdapter.GetSdl_SlpsEnterDetailList(where);
+                dataGridViewDetails.AutoGenerateColumns = false;
+                dataGridViewDetails.DataSource = slpsEnterDetail.Tables[0];
                 //显示车辆过磅记录
                 Common.ShowTruckWeight(textBoxCar.Text, dataGridViewHistory);
             }
-            //查询订单明细
-            DataSet slpsEnterDetail = Sdl_SlpsEnterDetailAdapter.GetSdl_SlpsEnterDetailList(where);
-            dataGridViewDetails.AutoGenerateColumns = false;
-            dataGridViewDetails.DataSource = slpsEnterDetail.Tables[0];
-            Common.ShowTruckWeight(textBoxCar.Text, dataGridViewHistory);
+            else
+            {
+                MessageBox.Show(this, "没有预留单号信息", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
         }
 
         private void timer_Tick(object sender, EventArgs e)

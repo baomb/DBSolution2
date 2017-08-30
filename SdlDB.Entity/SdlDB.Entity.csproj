@@ -136,7 +136,9 @@
     <Compile Include="Sdl_Warehouse.cs" />
     <Compile Include="Sdl_Sweight.cs" />
     <Compile Include="Slps_RawMaterialsProcurement.cs" />
+    <Compile Include="Slps_FinishedProductsPresentation.cs" />
     <Compile Include="Slps_RawMaterialsReturn.cs" />
+    <Compile Include="Slps_FinishedProductsPresentationDetail.cs" />
     <Compile Include="Slps_RawMaterialsSale.cs" />
     <Compile Include="Slps_RawMaterialsProcurementDetail.cs" />
     <Compile Include="Slps_RawMaterialsReturnDetail.cs" />

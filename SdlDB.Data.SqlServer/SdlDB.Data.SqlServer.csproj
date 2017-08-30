@@ -105,8 +105,10 @@
     <Compile Include="Sdl_FunctionsInRoles.cs" />
     <Compile Include="Sdl_LoadometerDiff.cs" />
     <Compile Include="Sdl_Manual.cs" />
+    <Compile Include="Slps_FinishedProductsPresentation.cs" />
     <Compile Include="Slps_RawMaterialsReturn.cs" />
     <Compile Include="Slps_ProductsReturn.cs" />
+    <Compile Include="Slps_FinishedProductsPresentationDetail.cs" />
     <Compile Include="Slps_RawMaterialsReturnDetail.cs" />
     <Compile Include="Slps_RawMaterialsProcurement.cs" />
     <Compile Include="Slps_ProductsReturnDetail.cs" />

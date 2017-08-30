@@ -1688,5 +1688,27 @@ namespace SdlDB.Data
         List<Slps_RawMaterialsReturnDetail> GetSlps_RawMaterialsReturnDetailList(DataTable table);
         #endregion
 
+
+        #region Slps_FinishedProductsPresentation
+        DataSet GetSlps_FinishedProductsPresentationDataSet(string where);
+        bool ExistSlps_FinishedProductsPresentation(string timeFlag, string carNo);
+        int AddSlps_FinishedProductsPresentation(Slps_FinishedProductsPresentation model);
+        void UpdateSlps_FinishedProductsPresentation(Slps_FinishedProductsPresentation model);
+        void DeleteSlps_FinishedProductsPresentation(string timeFlag, string carNo);
+        Slps_FinishedProductsPresentation GetSlps_FinishedProductsPresentation(string timeFlag, string lineItemNo);
+        List<Slps_FinishedProductsPresentation> GetSlps_FinishedProductsPresentationList(DataTable table);
+        #endregion
+
+        #region Slps_FinishedProductsPresentationDetail
+        DataSet GetSlps_FinishedProductsPresentationDetailDataSet(string where);
+        DataSet GetSlps_FinishedProductsPresentationDetailList(string qrcodeScanResult, string sapOrderNo);
+        bool ExistSlps_FinishedProductsPresentationDetail(string qrcodeScanResult, string sapOrderNo, string lineItemNo);
+        int AddSlps_FinishedProductsPresentationDetail(Slps_FinishedProductsPresentationDetail model);
+        void UpdateSlps_FinishedProductsPresentationDetail(Slps_FinishedProductsPresentationDetail model);
+        void DeleteSlps_FinishedProductsPresentationDetail(string timeFlag);
+        Slps_FinishedProductsPresentationDetail GetSlps_FinishedProductsPresentationDetail(string timeFlag, string lineItemNo);
+        List<Slps_FinishedProductsPresentationDetail> GetSlps_FinishedProductsPresentationDetailList(DataTable table);
+        #endregion
+
     }
 }

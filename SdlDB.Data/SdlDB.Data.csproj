@@ -113,8 +113,10 @@
     <Compile Include="DataProvider\Sdl_FunctionsInRolesAdapter.cs" />
     <Compile Include="DataProvider\Sdl_LoadometerDiffAdapter.cs" />
     <Compile Include="DataProvider\Sdl_ManualAdapter.cs" />
+    <Compile Include="DataProvider\Slps_FinishedProductsPresentationAdapter.cs" />
     <Compile Include="DataProvider\Slps_RawMaterialsReturnAdapter.cs" />
     <Compile Include="DataProvider\Slps_ProductsReturnAdapter.cs" />
+    <Compile Include="DataProvider\Slps_FinishedProductsPresentationDetailAdapter.cs" />
     <Compile Include="DataProvider\Slps_RawMaterialsReturnDetailAdapter.cs" />
     <Compile Include="DataProvider\Slps_RawMaterialsProcurementAdapter.cs" />
     <Compile Include="DataProvider\Slps_ProductsReturnDetailAdapter.cs" />
