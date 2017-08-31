@@ -1710,5 +1710,26 @@ namespace SdlDB.Data
         List<Slps_FinishedProductsPresentationDetail> GetSlps_FinishedProductsPresentationDetailList(DataTable table);
         #endregion
 
+        #region Slps_RawMaterialsSale
+        DataSet GetSlps_RawMaterialsSaleDataSet(string where);
+        bool ExistSlps_RawMaterialsSale(string timeFlag, string carNo);
+        int AddSlps_RawMaterialsSale(Slps_RawMaterialsSale model);
+        void UpdateSlps_RawMaterialsSale(Slps_RawMaterialsSale model);
+        void DeleteSlps_RawMaterialsSale(string timeFlag, string carNo);
+        Slps_RawMaterialsSale GetSlps_RawMaterialsSale(string timeFlag, string lineItemNo);
+        List<Slps_RawMaterialsSale> GetSlps_RawMaterialsSaleList(DataTable table);
+        #endregion
+
+        #region Slps_RawMaterialsSaleDetail
+        DataSet GetSlps_RawMaterialsSaleDetailList(string where);
+        DataSet GetSlps_RawMaterialsSaleDetailList(string qrcodeScanResult, string sapOrderNo);
+        bool ExistSlps_RawMaterialsSaleDetail(string qrcodeScanResult, string sapOrderNo, string lineItemNo);
+        int AddSlps_RawMaterialsSaleDetail(Slps_RawMaterialsSaleDetail model);
+        void UpdateSlps_RawMaterialsSaleDetail(Slps_RawMaterialsSaleDetail model);
+        void DeleteSlps_RawMaterialsSaleDetail(string timeFlag);
+        Slps_RawMaterialsSaleDetail GetSlps_RawMaterialsSaleDetail(string timeFlag, string lineItemNo);
+        List<Slps_RawMaterialsSaleDetail> GetSlps_RawMaterialsSaleDetailList(DataTable table);
+        #endregion
+
     }
 }
