@@ -18,9 +18,9 @@ namespace SdlDB.Data
         /// <summary>
         /// 是否存在该记录
         /// </summary>
-        public static bool ExistSlps_RawMaterialsSale(string qrcodeScanResult, string sapOrderNo)
+        public static bool ExistSlps_RawMaterialsSale(string timeFlag, string carNo)
         {
-            return DatabaseProvider.GetInstance().ExistSlps_RawMaterialsSale(qrcodeScanResult, sapOrderNo);
+            return DatabaseProvider.GetInstance().ExistSlps_RawMaterialsSale(timeFlag, carNo);
         }
 
         /// <summary>
@@ -51,10 +51,10 @@ namespace SdlDB.Data
         /// <summary>
         /// 得到一个对象实体
         /// </summary>
-        public static Slps_RawMaterialsSale GetSlps_RawMaterialsSale(string qrcodeScanResult, string carNo)
+        public static Slps_RawMaterialsSale GetSlps_RawMaterialsSale(string timeFlag, string lineItemNo)
         {
 
-            return DatabaseProvider.GetInstance().GetSlps_RawMaterialsSale(qrcodeScanResult, carNo);
+            return DatabaseProvider.GetInstance().GetSlps_RawMaterialsSale(timeFlag, lineItemNo);
         }
 
         /// <summary>
