@@ -10,6 +10,7 @@ namespace DBSolution
 {
     partial class AboutBox : Form
     {
+        //史丹利
         public AboutBox()
         {
             InitializeComponent();
