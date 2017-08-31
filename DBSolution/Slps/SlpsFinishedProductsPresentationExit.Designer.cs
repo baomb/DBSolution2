@@ -29,8 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FinishedProductsPresentationExit));
-            this.textBoxRSNUM = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SlpsFinishedProductsPresentationExit));
             this.panelBottom = new System.Windows.Forms.Panel();
             this.groupBoxStep3 = new System.Windows.Forms.GroupBox();
             this.dataGridViewDetails = new System.Windows.Forms.DataGridView();
@@ -54,7 +53,6 @@
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButtonQuit = new System.Windows.Forms.ToolStripButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.labelVBELN = new System.Windows.Forms.Label();
             this.textBoxFactory = new System.Windows.Forms.TextBox();
             this.panel0 = new System.Windows.Forms.Panel();
             this.groupBoxWeight = new System.Windows.Forms.GroupBox();
@@ -71,25 +69,20 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxSgtxt = new System.Windows.Forms.TextBox();
             this.labelFactory = new System.Windows.Forms.Label();
-            this.textBoxExitTime = new System.Windows.Forms.TextBox();
-            this.labelExitTime = new System.Windows.Forms.Label();
             this.textBoxCar = new System.Windows.Forms.TextBox();
             this.labelCar = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.serialPort = new System.IO.Ports.SerialPort(this.components);
-            this.COPY = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.RSNUM = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RSPOS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MATNR = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MAKTX = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LEFTNUM = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OVERNUM = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BDMNG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PWEIGHT = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.REALMENGE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SFIMG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LGORT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DELETE = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.qrcodeScanResult = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sapOrderNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lineItemNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.matnr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maktx = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bdmng = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pweight = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.realMenge = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sfimg = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lgort = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelBottom.SuspendLayout();
             this.groupBoxStep3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDetails)).BeginInit();
@@ -101,15 +94,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHistory)).BeginInit();
             this.groupBoxStep1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // textBoxRSNUM
-            // 
-            this.textBoxRSNUM.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxRSNUM.Location = new System.Drawing.Point(267, 24);
-            this.textBoxRSNUM.Name = "textBoxRSNUM";
-            this.textBoxRSNUM.ReadOnly = true;
-            this.textBoxRSNUM.Size = new System.Drawing.Size(104, 21);
-            this.textBoxRSNUM.TabIndex = 2;
             // 
             // panelBottom
             // 
@@ -137,19 +121,16 @@
             this.dataGridViewDetails.AllowUserToDeleteRows = false;
             this.dataGridViewDetails.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(209)))), ((int)(((byte)(234)))));
             this.dataGridViewDetails.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.COPY,
-            this.RSNUM,
-            this.RSPOS,
-            this.MATNR,
-            this.MAKTX,
-            this.LEFTNUM,
-            this.OVERNUM,
-            this.BDMNG,
-            this.PWEIGHT,
-            this.REALMENGE,
-            this.SFIMG,
-            this.LGORT,
-            this.DELETE});
+            this.qrcodeScanResult,
+            this.sapOrderNo,
+            this.lineItemNo,
+            this.matnr,
+            this.maktx,
+            this.bdmng,
+            this.pweight,
+            this.realMenge,
+            this.sfimg,
+            this.lgort});
             this.dataGridViewDetails.Location = new System.Drawing.Point(23, 25);
             this.dataGridViewDetails.Name = "dataGridViewDetails";
             this.dataGridViewDetails.RowTemplate.Height = 23;
@@ -161,7 +142,7 @@
             // textBoxTotalSfimg
             // 
             this.textBoxTotalSfimg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxTotalSfimg.Location = new System.Drawing.Point(87, 183);
+            this.textBoxTotalSfimg.Location = new System.Drawing.Point(469, 114);
             this.textBoxTotalSfimg.Name = "textBoxTotalSfimg";
             this.textBoxTotalSfimg.ReadOnly = true;
             this.textBoxTotalSfimg.Size = new System.Drawing.Size(104, 21);
@@ -171,26 +152,26 @@
             // labelBalance
             // 
             this.labelBalance.AutoSize = true;
-            this.labelBalance.Location = new System.Drawing.Point(1, 185);
+            this.labelBalance.Location = new System.Drawing.Point(408, 118);
             this.labelBalance.Name = "labelBalance";
-            this.labelBalance.Size = new System.Drawing.Size(77, 12);
+            this.labelBalance.Size = new System.Drawing.Size(53, 12);
             this.labelBalance.TabIndex = 15;
-            this.labelBalance.Text = "实发吨数合计";
+            this.labelBalance.Text = "实发合计";
             // 
             // textBoxNet
             // 
             this.textBoxNet.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxNet.Location = new System.Drawing.Point(456, 130);
+            this.textBoxNet.Location = new System.Drawing.Point(469, 169);
             this.textBoxNet.Name = "textBoxNet";
             this.textBoxNet.ReadOnly = true;
-            this.textBoxNet.Size = new System.Drawing.Size(100, 21);
+            this.textBoxNet.Size = new System.Drawing.Size(104, 21);
             this.textBoxNet.TabIndex = 14;
             this.textBoxNet.Text = "0";
             // 
             // labelNet
             // 
             this.labelNet.AutoSize = true;
-            this.labelNet.Location = new System.Drawing.Point(417, 134);
+            this.labelNet.Location = new System.Drawing.Point(432, 173);
             this.labelNet.Name = "labelNet";
             this.labelNet.Size = new System.Drawing.Size(29, 12);
             this.labelNet.TabIndex = 13;
@@ -199,7 +180,7 @@
             // textBoxTare
             // 
             this.textBoxTare.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxTare.Location = new System.Drawing.Point(267, 130);
+            this.textBoxTare.Location = new System.Drawing.Point(267, 169);
             this.textBoxTare.Name = "textBoxTare";
             this.textBoxTare.ReadOnly = true;
             this.textBoxTare.Size = new System.Drawing.Size(104, 21);
@@ -210,7 +191,7 @@
             // labelTare
             // 
             this.labelTare.AutoSize = true;
-            this.labelTare.Location = new System.Drawing.Point(226, 139);
+            this.labelTare.Location = new System.Drawing.Point(226, 173);
             this.labelTare.Name = "labelTare";
             this.labelTare.Size = new System.Drawing.Size(29, 12);
             this.labelTare.TabIndex = 11;
@@ -219,7 +200,7 @@
             // textBoxGross
             // 
             this.textBoxGross.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxGross.Location = new System.Drawing.Point(87, 130);
+            this.textBoxGross.Location = new System.Drawing.Point(87, 169);
             this.textBoxGross.Name = "textBoxGross";
             this.textBoxGross.Size = new System.Drawing.Size(84, 21);
             this.textBoxGross.TabIndex = 10;
@@ -229,7 +210,7 @@
             // labelGross
             // 
             this.labelGross.AutoSize = true;
-            this.labelGross.Location = new System.Drawing.Point(49, 139);
+            this.labelGross.Location = new System.Drawing.Point(49, 173);
             this.labelGross.Name = "labelGross";
             this.labelGross.Size = new System.Drawing.Size(29, 12);
             this.labelGross.TabIndex = 9;
@@ -238,7 +219,7 @@
             // textBoxWeighMan
             // 
             this.textBoxWeighMan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxWeighMan.Location = new System.Drawing.Point(87, 73);
+            this.textBoxWeighMan.Location = new System.Drawing.Point(87, 114);
             this.textBoxWeighMan.Name = "textBoxWeighMan";
             this.textBoxWeighMan.ReadOnly = true;
             this.textBoxWeighMan.Size = new System.Drawing.Size(84, 21);
@@ -247,7 +228,7 @@
             // labelWeighMan
             // 
             this.labelWeighMan.AutoSize = true;
-            this.labelWeighMan.Location = new System.Drawing.Point(37, 82);
+            this.labelWeighMan.Location = new System.Drawing.Point(37, 118);
             this.labelWeighMan.Name = "labelWeighMan";
             this.labelWeighMan.Size = new System.Drawing.Size(41, 12);
             this.labelWeighMan.TabIndex = 6;
@@ -345,22 +326,13 @@
             this.panel2.Size = new System.Drawing.Size(1004, 30);
             this.panel2.TabIndex = 17;
             // 
-            // labelVBELN
-            // 
-            this.labelVBELN.AutoSize = true;
-            this.labelVBELN.Location = new System.Drawing.Point(202, 28);
-            this.labelVBELN.Name = "labelVBELN";
-            this.labelVBELN.Size = new System.Drawing.Size(53, 12);
-            this.labelVBELN.TabIndex = 6;
-            this.labelVBELN.Text = "预留单号";
-            // 
             // textBoxFactory
             // 
             this.textBoxFactory.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxFactory.Location = new System.Drawing.Point(456, 73);
+            this.textBoxFactory.Location = new System.Drawing.Point(267, 56);
             this.textBoxFactory.Name = "textBoxFactory";
             this.textBoxFactory.ReadOnly = true;
-            this.textBoxFactory.Size = new System.Drawing.Size(100, 21);
+            this.textBoxFactory.Size = new System.Drawing.Size(104, 21);
             this.textBoxFactory.TabIndex = 5;
             // 
             // panel0
@@ -471,16 +443,12 @@
             this.groupBoxStep1.Controls.Add(this.labelBalance);
             this.groupBoxStep1.Controls.Add(this.label1);
             this.groupBoxStep1.Controls.Add(this.textBoxSgtxt);
-            this.groupBoxStep1.Controls.Add(this.textBoxRSNUM);
-            this.groupBoxStep1.Controls.Add(this.labelVBELN);
             this.groupBoxStep1.Controls.Add(this.textBoxFactory);
             this.groupBoxStep1.Controls.Add(this.labelGross);
             this.groupBoxStep1.Controls.Add(this.labelWeighMan);
             this.groupBoxStep1.Controls.Add(this.labelFactory);
             this.groupBoxStep1.Controls.Add(this.textBoxNet);
-            this.groupBoxStep1.Controls.Add(this.textBoxExitTime);
             this.groupBoxStep1.Controls.Add(this.labelNet);
-            this.groupBoxStep1.Controls.Add(this.labelExitTime);
             this.groupBoxStep1.Controls.Add(this.textBoxCar);
             this.groupBoxStep1.Controls.Add(this.textBoxWeighMan);
             this.groupBoxStep1.Controls.Add(this.textBoxTare);
@@ -497,7 +465,7 @@
             // textBoxDBNum
             // 
             this.textBoxDBNum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxDBNum.Location = new System.Drawing.Point(456, 183);
+            this.textBoxDBNum.Location = new System.Drawing.Point(469, 56);
             this.textBoxDBNum.Name = "textBoxDBNum";
             this.textBoxDBNum.ReadOnly = true;
             this.textBoxDBNum.Size = new System.Drawing.Size(104, 21);
@@ -507,16 +475,16 @@
             // labelDBNum
             // 
             this.labelDBNum.AutoSize = true;
-            this.labelDBNum.Location = new System.Drawing.Point(369, 185);
+            this.labelDBNum.Location = new System.Drawing.Point(408, 60);
             this.labelDBNum.Name = "labelDBNum";
-            this.labelDBNum.Size = new System.Drawing.Size(77, 12);
+            this.labelDBNum.Size = new System.Drawing.Size(53, 12);
             this.labelDBNum.TabIndex = 17;
-            this.labelDBNum.Text = "入厂地磅编号";
+            this.labelDBNum.Text = "地磅编号";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(214, 82);
+            this.label1.Location = new System.Drawing.Point(214, 118);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 12);
             this.label1.TabIndex = 7;
@@ -525,7 +493,7 @@
             // textBoxSgtxt
             // 
             this.textBoxSgtxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxSgtxt.Location = new System.Drawing.Point(267, 73);
+            this.textBoxSgtxt.Location = new System.Drawing.Point(267, 114);
             this.textBoxSgtxt.Name = "textBoxSgtxt";
             this.textBoxSgtxt.Size = new System.Drawing.Size(104, 21);
             this.textBoxSgtxt.TabIndex = 8;
@@ -533,44 +501,25 @@
             // labelFactory
             // 
             this.labelFactory.AutoSize = true;
-            this.labelFactory.Location = new System.Drawing.Point(421, 77);
+            this.labelFactory.Location = new System.Drawing.Point(226, 60);
             this.labelFactory.Name = "labelFactory";
             this.labelFactory.Size = new System.Drawing.Size(29, 12);
             this.labelFactory.TabIndex = 4;
             this.labelFactory.Text = "工厂";
             // 
-            // textBoxExitTime
-            // 
-            this.textBoxExitTime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxExitTime.Location = new System.Drawing.Point(456, 24);
-            this.textBoxExitTime.Name = "textBoxExitTime";
-            this.textBoxExitTime.ReadOnly = true;
-            this.textBoxExitTime.Size = new System.Drawing.Size(130, 21);
-            this.textBoxExitTime.TabIndex = 3;
-            // 
-            // labelExitTime
-            // 
-            this.labelExitTime.AutoSize = true;
-            this.labelExitTime.Location = new System.Drawing.Point(397, 28);
-            this.labelExitTime.Name = "labelExitTime";
-            this.labelExitTime.Size = new System.Drawing.Size(53, 12);
-            this.labelExitTime.TabIndex = 2;
-            this.labelExitTime.Text = "出厂时间";
-            // 
             // textBoxCar
             // 
             this.textBoxCar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxCar.Location = new System.Drawing.Point(87, 24);
+            this.textBoxCar.Location = new System.Drawing.Point(87, 56);
             this.textBoxCar.Name = "textBoxCar";
             this.textBoxCar.ReadOnly = true;
             this.textBoxCar.Size = new System.Drawing.Size(84, 21);
             this.textBoxCar.TabIndex = 1;
-            this.textBoxCar.DoubleClick += new System.EventHandler(this.textBoxCar_DoubleClick);
             // 
             // labelCar
             // 
             this.labelCar.AutoSize = true;
-            this.labelCar.Location = new System.Drawing.Point(37, 28);
+            this.labelCar.Location = new System.Drawing.Point(37, 60);
             this.labelCar.Name = "labelCar";
             this.labelCar.Size = new System.Drawing.Size(41, 12);
             this.labelCar.TabIndex = 0;
@@ -581,107 +530,78 @@
             this.timer.Interval = 500;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
-            // COPY
+            // qrcodeScanResult
             // 
-            this.COPY.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.COPY.HeaderText = "复制";
-            this.COPY.Name = "COPY";
-            this.COPY.Text = "复制";
-            this.COPY.ToolTipText = "复制";
-            this.COPY.UseColumnTextForButtonValue = true;
-            this.COPY.Width = 50;
+            this.qrcodeScanResult.DataPropertyName = "qrcodeScanResult";
+            this.qrcodeScanResult.HeaderText = "二维码";
+            this.qrcodeScanResult.Name = "qrcodeScanResult";
+            this.qrcodeScanResult.Visible = false;
             // 
-            // RSNUM
+            // sapOrderNo
             // 
-            this.RSNUM.DataPropertyName = "RSNUM";
-            this.RSNUM.HeaderText = "预留单号";
-            this.RSNUM.Name = "RSNUM";
-            this.RSNUM.ReadOnly = true;
-            this.RSNUM.Width = 60;
+            this.sapOrderNo.DataPropertyName = "sapOrderNo";
+            this.sapOrderNo.HeaderText = "预留单号";
+            this.sapOrderNo.Name = "sapOrderNo";
+            this.sapOrderNo.ReadOnly = true;
+            this.sapOrderNo.Width = 60;
             // 
-            // RSPOS
+            // lineItemNo
             // 
-            this.RSPOS.DataPropertyName = "RSPOS";
-            this.RSPOS.HeaderText = "项目号";
-            this.RSPOS.Name = "RSPOS";
-            this.RSPOS.ReadOnly = true;
-            this.RSPOS.Width = 60;
+            this.lineItemNo.DataPropertyName = "lineItemNo";
+            this.lineItemNo.HeaderText = "项目号";
+            this.lineItemNo.Name = "lineItemNo";
+            this.lineItemNo.ReadOnly = true;
+            this.lineItemNo.Width = 60;
             // 
-            // MATNR
+            // matnr
             // 
-            this.MATNR.DataPropertyName = "MATNR";
-            this.MATNR.HeaderText = "物料编码";
-            this.MATNR.Name = "MATNR";
-            this.MATNR.ReadOnly = true;
+            this.matnr.DataPropertyName = "matnr";
+            this.matnr.HeaderText = "物料编码";
+            this.matnr.Name = "matnr";
+            this.matnr.ReadOnly = true;
             // 
-            // MAKTX
+            // maktx
             // 
-            this.MAKTX.DataPropertyName = "MAKTX";
-            this.MAKTX.HeaderText = "物料描述";
-            this.MAKTX.Name = "MAKTX";
-            this.MAKTX.ReadOnly = true;
-            this.MAKTX.Width = 180;
+            this.maktx.DataPropertyName = "maktx";
+            this.maktx.HeaderText = "物料描述";
+            this.maktx.Name = "maktx";
+            this.maktx.ReadOnly = true;
+            this.maktx.Width = 180;
             // 
-            // LEFTNUM
+            // bdmng
             // 
-            this.LEFTNUM.DataPropertyName = "LEFTNUM";
-            this.LEFTNUM.HeaderText = "预留数量";
-            this.LEFTNUM.Name = "LEFTNUM";
-            this.LEFTNUM.ReadOnly = true;
-            this.LEFTNUM.Width = 80;
+            this.bdmng.DataPropertyName = "bdmng";
+            this.bdmng.HeaderText = "预留剩余数量";
+            this.bdmng.Name = "bdmng";
             // 
-            // OVERNUM
+            // pweight
             // 
-            this.OVERNUM.DataPropertyName = "OVERNUM";
-            this.OVERNUM.HeaderText = "已发数量";
-            this.OVERNUM.Name = "OVERNUM";
-            this.OVERNUM.Width = 80;
+            this.pweight.HeaderText = "包重";
+            this.pweight.Name = "pweight";
+            this.pweight.Width = 80;
             // 
-            // BDMNG
+            // realMenge
             // 
-            this.BDMNG.DataPropertyName = "BDMNG";
-            this.BDMNG.HeaderText = "预留剩余数量";
-            this.BDMNG.Name = "BDMNG";
+            this.realMenge.DataPropertyName = "realMenge";
+            this.realMenge.HeaderText = "实发件数";
+            this.realMenge.Name = "realMenge";
+            this.realMenge.Width = 60;
             // 
-            // PWEIGHT
+            // sfimg
             // 
-            this.PWEIGHT.HeaderText = "包重";
-            this.PWEIGHT.Name = "PWEIGHT";
-            this.PWEIGHT.Width = 80;
+            this.sfimg.DataPropertyName = "sfimg";
+            this.sfimg.HeaderText = "实发吨数";
+            this.sfimg.Name = "sfimg";
+            this.sfimg.ReadOnly = true;
+            this.sfimg.Width = 60;
             // 
-            // REALMENGE
+            // lgort
             // 
-            this.REALMENGE.DataPropertyName = "REALMENGE";
-            this.REALMENGE.HeaderText = "实发件数";
-            this.REALMENGE.Name = "REALMENGE";
-            this.REALMENGE.Width = 60;
+            this.lgort.DataPropertyName = "lgort";
+            this.lgort.HeaderText = "收货仓库";
+            this.lgort.Name = "lgort";
             // 
-            // SFIMG
-            // 
-            this.SFIMG.DataPropertyName = "SFIMG";
-            this.SFIMG.HeaderText = "实发吨数";
-            this.SFIMG.Name = "SFIMG";
-            this.SFIMG.ReadOnly = true;
-            this.SFIMG.Width = 60;
-            // 
-            // LGORT
-            // 
-            this.LGORT.DataPropertyName = "LGORT";
-            this.LGORT.HeaderText = "收货仓库";
-            this.LGORT.Name = "LGORT";
-            // 
-            // DELETE
-            // 
-            this.DELETE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DELETE.HeaderText = "删除";
-            this.DELETE.Name = "DELETE";
-            this.DELETE.ReadOnly = true;
-            this.DELETE.Text = "删除";
-            this.DELETE.ToolTipText = "删除";
-            this.DELETE.UseColumnTextForButtonValue = true;
-            this.DELETE.Width = 50;
-            // 
-            // FinishedProductsPresentationExit
+            // SlpsFinishedProductsPresentationExit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -690,7 +610,7 @@
             this.Controls.Add(this.panel0);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.panel2);
-            this.Name = "FinishedProductsPresentationExit";
+            this.Name = "SlpsFinishedProductsPresentationExit";
             this.Text = "史丹利产成品赠送出厂";
             this.panelBottom.ResumeLayout(false);
             this.groupBoxStep3.ResumeLayout(false);
@@ -713,8 +633,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBoxRSNUM;
         private System.Windows.Forms.Panel panelBottom;
         private System.Windows.Forms.TextBox textBoxTotalSfimg;
         private System.Windows.Forms.Label labelBalance;
@@ -736,7 +654,6 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton toolStripButtonQuit;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label labelVBELN;
         private System.Windows.Forms.TextBox textBoxFactory;
         private System.Windows.Forms.Panel panel0;
         private System.Windows.Forms.GroupBox groupBoxWeight;
@@ -745,8 +662,6 @@
         private System.Windows.Forms.TextBox textBoxPrompt;
         private System.Windows.Forms.GroupBox groupBoxStep1;
         private System.Windows.Forms.Label labelFactory;
-        private System.Windows.Forms.TextBox textBoxExitTime;
-        private System.Windows.Forms.Label labelExitTime;
         private System.Windows.Forms.TextBox textBoxCar;
         private System.Windows.Forms.Label labelCar;
         private System.Windows.Forms.TextBox textBoxSgtxt;
@@ -761,18 +676,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TARE;
         private System.Windows.Forms.DataGridViewTextBoxColumn WERKS;
         private System.Windows.Forms.DataGridViewTextBoxColumn TIMEFLAG;
-        private System.Windows.Forms.DataGridViewButtonColumn COPY;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RSNUM;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RSPOS;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MATNR;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MAKTX;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LEFTNUM;
-        private System.Windows.Forms.DataGridViewTextBoxColumn OVERNUM;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BDMNG;
-        private System.Windows.Forms.DataGridViewComboBoxColumn PWEIGHT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn REALMENGE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SFIMG;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LGORT;
-        private System.Windows.Forms.DataGridViewButtonColumn DELETE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn qrcodeScanResult;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sapOrderNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lineItemNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn matnr;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maktx;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bdmng;
+        private System.Windows.Forms.DataGridViewComboBoxColumn pweight;
+        private System.Windows.Forms.DataGridViewTextBoxColumn realMenge;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sfimg;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lgort;
     }
 }
